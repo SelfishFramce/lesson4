@@ -1,11 +1,16 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Verdana, sans-serif;
+  background-image: url(./img/img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
 /* Обертка всего контента игры */
@@ -35,7 +40,7 @@ body {
 }
 
 /* Название игры */
-.state__title{
+.state__title {
   font-size: 36px;
   text-align: center;
   margin: 15px 0;
@@ -47,7 +52,7 @@ body {
   height: 100%;
   background: transparent;
   outline: none;
-  border: 2px solid rgba(0,0,0, .2);
+  border: 2px solid rgba(0, 0, 0, .2);
   border-radius: 40px;
   font-size: 16px;
   padding: 20px 45px 20px 20px;
@@ -65,20 +70,47 @@ body {
   border: 2px solid black;
 }
 
-/* Кнопка "Начать" */
-.board__button  {
+/* Все кнопки */
+.button {
   width: 100%;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: #fff;
-  color:#000;
+  background-color: transparent;
+  color: #000;
+  border: 2px solid rgba(0, 0, 0, .4);
   border-radius: 40px;
   padding: 20px;
   cursor: pointer;
 }
 
 /* Состояние наведения курсора мыши на кнопку */
-.board__button:hover{
+.button:hover {
   color: rgba(181, 13, 181, 0.7);
+}
+
+/* Игровое поле */
+.table {
+  display: grid;
+  min-width: 500px;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Отдельно взятая карточка */
+.card {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(218, 69, 218, 0.6);
+  border-radius: 5px;
+  transition: .3s;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgba(218, 69, 218, 1);
 }
